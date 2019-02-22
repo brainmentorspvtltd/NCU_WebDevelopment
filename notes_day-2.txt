@@ -1,0 +1,98 @@
+Block Level
+- which occupy full width of screen or any section
+- width is 100% to the screen or section
+- div, table, headings, forms
+
+inline level
+- they occupy height and width according to content
+- by default height and width is auto x auto
+- a, span, b, strong, i, em...
+
+Inline-Block
+- which has height and width but appear like inline 
+- img
+
+Forms
+text
+password
+dropdown
+radio buttons
+checkbox
+
+email
+range
+number
+date
+time
+
+CSS 2
+Selectors
+Backgrounds and Borders
+Text Formatting
+-----------------------
+Floating
+Clearfix
+Positions
+Display
+
+Transformations - 2D + 3D
+Animations
+Responsive web design
+- flexbox
+- media queries
+
+
+CSS
+
+Id and Class
+ID
+- cannot be repeated on a page
+- an element can have only 1 id
+- represented by #
+
+Class
+- class is for grouping
+- class can be used multiple times and an element can have any number of classes
+- represented by dot(.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Positions
+- Static
+- Fixed
+- Absolute
+- Relative
+- Sticky
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
