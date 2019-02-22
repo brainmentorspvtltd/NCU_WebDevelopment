@@ -1,0 +1,35 @@
+body {
+    /* width: 50%; */
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+img {
+    width: 100%;
+}
+
+#header {
+    text-align: center;
+    background-color: lightblue;
+    position: fixed;
+    width: 100%;
+    /* right: 0px; */
+    /* bottom: 0px; */
+    top: 0px;
+}
+
+#content {
+    margin-top: 100px;
+}
