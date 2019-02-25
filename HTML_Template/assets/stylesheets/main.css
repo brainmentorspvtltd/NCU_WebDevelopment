@@ -1,0 +1,62 @@
+/* Global Settings */
+
+body {
+    /* because body takes 8px of margin */
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0px;
+}
+
+
+/* Helper Classes */
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.container {
+    width: 960px;
+}
+
+#header {}
+
+#main-navigation {}
+
+#content {}
+
+#main {}
+
+#sidebar {}
+
+#footer {}
