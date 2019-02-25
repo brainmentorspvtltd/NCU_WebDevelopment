@@ -1,0 +1,111 @@
+/* Global Settings */
+
+body {
+    /* because body takes 8px of margin */
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0px;
+}
+
+
+/* Helper Classes */
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#header {
+    background-color: #009270;
+    padding: 0px 10px;
+}
+
+#header .logo {
+    padding-top: 5px;
+}
+
+#header .search {
+    padding-top: 10px;
+    position: relative;
+}
+
+#header .search input[type="text"] {
+    height: 28px;
+    background-color: #00785C;
+    border: none;
+}
+
+#header .search input[type="text"]:focus {
+    border: none;
+    outline: none;
+}
+
+#header .search span {
+    position: absolute;
+    left: 5px;
+    top: 15px;
+    color: #fff;
+}
+
+#main-navigation {
+    margin-left: 20px;
+}
+
+#main-navigation ul li {
+    display: inline-block;
+}
+
+#main-navigation ul li a {
+    color: #fff;
+    padding: 15px 8px;
+    font-size: 14px;
+    display: block;
+}
+
+#main-navigation ul li a:hover {
+    background-color: #028062;
+}
+
+#content {}
+
+#main {}
+
+#sidebar {}
+
+#footer {}
