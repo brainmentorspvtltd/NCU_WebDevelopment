@@ -1,0 +1,256 @@
+body {
+    margin: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.row {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0px;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+#header {
+    margin-bottom: 10px;
+}
+
+#header .header_top {
+    padding: 12px 0px 10px;
+}
+
+#header .header_top .row {
+    justify-content: space-between;
+}
+
+#header .header_top {
+    border-bottom: 1px solid lightgray;
+}
+
+#header .logo a {
+    font-family: 'Elsie Swash Caps', cursive;
+    font-size: 42px;
+    color: #000;
+}
+
+#header .logo .logo_h {
+    color: #64b3f4;
+}
+
+#header .user_store ul li {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+#header .user_store select {
+    height: 34px;
+    width: 150px;
+    border: 1px solid #dadada;
+}
+
+#header .user_store button {
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+}
+
+#header .user_store i {
+    color: #64b3f4;
+    font-size: 24px;
+}
+
+#header .user_store .cart {
+    background-color: #D8E9FA;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+
+#header .header_bottom {
+    text-align: center;
+    /* padding: 12px 0px; */
+}
+
+#header .header_bottom ul {
+    display: flex;
+    justify-content: center;
+}
+
+#header .header_bottom ul li {
+    margin: 0px 12px;
+    transition: 1s;
+    border-bottom: 1px solid transparent;
+}
+
+#header .header_bottom ul li a {
+    color: #000;
+    padding: 10px 0px;
+    display: block;
+}
+
+#header .header_bottom li.active,
+#header .header_bottom li:hover {
+    /* border-bottom: 1px solid #64b3f4; */
+    border-color: #64b3f4;
+}
+
+#main-navigation {}
+
+#banner {
+    position: relative;
+}
+
+#banner .slider {
+    height: 550px;
+    animation: slider 10s infinite linear;
+    background-size: 100% 100%;
+}
+
+@keyframes slider {
+    0%,
+    22% {
+        background-image: url("https://demo.w3layouts.com/demos_new/template_demo/09-08-2018/fashion_hub-demo_Free/1005640873/web/images/bann1.jpg");
+    }
+    25%,
+    48% {
+        background-image: url("https://demo.w3layouts.com/demos_new/template_demo/09-08-2018/fashion_hub-demo_Free/1005640873/web/images/bann2.jpg");
+    }
+    50%,
+    73% {
+        background-image: url("https://demo.w3layouts.com/demos_new/template_demo/09-08-2018/fashion_hub-demo_Free/1005640873/web/images/bann3.jpg")
+    }
+    75%,
+    100% {
+        background-image: url("https://demo.w3layouts.com/demos_new/template_demo/09-08-2018/fashion_hub-demo_Free/1005640873/web/images/bann1.jpg");
+    }
+}
+
+#banner .text_1 {
+    position: absolute;
+    top: 7%;
+    left: 7%;
+}
+
+#banner .text_1 h1 {
+    font-size: 50px;
+    line-height: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+#banner .text_1 h1 span {
+    font-family: 'Elsie Swash Caps', cursive;
+    font-size: 110px;
+    line-height: 70px;
+    color: #F0475F;
+}
+
+#banner .text_1 p {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 8px;
+}
+
+#banner .discount_box {
+    position: absolute;
+    left: 7%;
+    top: 50%;
+    width: 35%;
+}
+
+#banner .discount_box h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+#banner .discount_box h2 span {
+    font-family: 'Elsie Swash Caps', cursive;
+    font-size: 60px;
+    line-height: 60px;
+    color: #000;
+}
+
+#banner .discount_box ul {
+    display: flex;
+}
+
+#banner .discount_box .box {
+    background-color: #D6C4B8;
+    padding: 30px;
+}
+
+#banner .discount_box h3 {
+    text-transform: uppercase;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+#banner .discount_box .d_percentage {
+    font-size: 60px;
+    font-weight: bold;
+    color: red;
+    display: block;
+    margin-top: -20px;
+    margin-left: 20px;
+}
+
+#banner .discount_box .off {
+    display: block;
+    text-transform: uppercase;
+    background-color: #fff;
+    padding: 10px 10px 0px;
+    margin-top: -20px;
+    margin-left: 20px;
+    font-weight: bold;
+    height: 80px;
+}
+
+#main {}
+
+#sidebar {}
+
+#footer {}
