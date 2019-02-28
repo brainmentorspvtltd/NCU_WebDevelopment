@@ -1,0 +1,336 @@
+/* Global Settings */
+
+body {
+    /* because body takes 8px of margin */
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    margin: 0px;
+}
+
+
+/* Helper Classes */
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#topbar {
+    background-color: #000;
+}
+
+#topbar a {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+#topbar ul {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+#topbar ul li {
+    width: 25%;
+    padding: 5px;
+    border-right: 1px solid gray;
+}
+
+#topbar .fas {
+    color: #2fdab8;
+    margin-right: 10px;
+}
+
+#header {
+    padding: 20px 0px 5px;
+}
+
+#header .search {
+    padding-top: 10px;
+}
+
+#header .search input[type='text'] {
+    padding: 5px;
+    height: 45px;
+    letter-spacing: 1px;
+    width: 85%;
+    border: 1px solid lightgray;
+}
+
+#header .search button {
+    display: inline-block;
+    font-size: 20px;
+    height: 45px;
+    width: 45px;
+    color: #fff;
+    background-color: #2FDAB8;
+    border: 1px solid #2FDAB8;
+}
+
+#header .logo h1 {
+    font-size: 50px;
+    font-weight: 300;
+    position: relative;
+}
+
+#header .logo h1 a {
+    color: #000;
+}
+
+#header .logo h1 span {
+    background-color: #000;
+    padding: 4px 18px;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+}
+
+#header .logo h1 i {
+    position: absolute;
+    bottom: 0px;
+    font-size: 17px;
+    bottom: -8px;
+    right: 45px;
+    color: #2FDAB8;
+}
+
+#header .sociable {
+    padding-top: 20px;
+}
+
+#header .sociable ul {
+    display: flex;
+}
+
+#header .sociable ul li {
+    margin: 0px 10px;
+}
+
+#header .sociable ul li:first-child {
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 7px;
+}
+
+#header .sociable ul li:not(:first-child) a {
+    color: #fff;
+    height: 30px;
+    padding-top: 5px;
+    width: 30px;
+    text-align: center;
+    font-size: 13px;
+    display: inline-block;
+}
+
+#header .sociable .fb {
+    background-color: #3b5998;
+}
+
+#header .sociable .tw {
+    background-color: #00acee;
+}
+
+#header .sociable .ins {
+    background-color: #f77737;
+}
+
+#header .sociable .link {
+    background-color: #bd081c;
+}
+
+#main-navigation {
+    background-color: #000000;
+}
+
+#main-navigation ul li {
+    position: relative;
+}
+
+#main-navigation ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#main-navigation ul li a {
+    color: #fff;
+    letter-spacing: 2px;
+    display: block;
+    padding: 22px 5px;
+}
+
+#main-navigation ul li:after {
+    content: "";
+    border: 2px solid #2FDAB8;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    transition: 1s;
+    transform: scale(0, 1);
+    transform-origin: left;
+}
+
+#main-navigation ul li.active:after {
+    transform: scale(1, 1);
+}
+
+#main-navigation ul li:hover:after {
+    transform: scale(1, 1);
+}
+
+.cart {
+    background-color: #2FDAB8;
+    text-align: center;
+    padding: 17px;
+}
+
+.cart a {
+    color: #fff;
+    font-size: 24px;
+}
+
+#banner .carousel-caption {
+    bottom: 50%;
+}
+
+#banner .carousel-item:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#section_1 {
+    padding-top: 80px;
+}
+
+#section_1 h2 {
+    margin-bottom: 50px;
+}
+
+#section_1 figure {
+    overflow: hidden;
+    position: relative;
+}
+
+#section_1 figcaption {
+    position: absolute;
+    width: 80%;
+    text-align: right;
+    right: 20px;
+    letter-spacing: 3px;
+    font-size: 30px;
+    top: 40px;
+    left: 40px;
+    color: #fff;
+    height: 80%;
+    transition: 0.5s;
+    border: 2px solid transparent;
+}
+
+#section_1 figcaption:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#section_1 figure img {
+    transition: 0.5s;
+    width: 100%;
+    transform: scale(1.2, 1);
+}
+
+#section_1 figure:hover img {
+    transform: scale(1.2, 1) translateX(20px);
+}
+
+#section_1 figure:hover figcaption {
+    border: 4px solid #fff;
+}
+
+#section_4 {
+    padding: 50px 0px;
+}
+
+#section_4 .image {
+    position: relative;
+    overflow: hidden;
+}
+
+#section_4 .image img {
+    width: 100%;
+}
+
+#section_4 .image:after,
+#section_4 .image:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+#section_4 .image:after {
+    left: -100%;
+    bottom: -100%;
+}
+
+#section_4 .image:before {
+    right: -100%;
+    top: -100%;
+}
+
+#section_4 .image:hover:after {
+    left: 0%;
+    bottom: 0%;
+}
+
+#section_4 .image:hover::before {
+    right: 0%;
+    top: 0%;
+}
+
+#footer {}
