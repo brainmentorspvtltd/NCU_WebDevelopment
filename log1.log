@@ -1,0 +1,152 @@
+var a;
+undefined
+typeof a;
+"undefined"
+a=100;
+100
+typeof a;
+"number"
+a=1;
+1
+typeof a;
+"number"
+a=1000000;
+1000000
+typeof a;
+"number"
+a=100.20;
+100.2
+typeof a;
+"number"
+a="100";
+"100"
+typeof a;
+"string"
+var b = 100;
+undefined
+typeof b;
+"number"
+a + b;
+"100100"
+a-b;
+0
+a*b;
+10000
+a/b;
+1
+a="One";
+"One"
+b;
+100
+a-b;
+NaN
+var c = a-b;
+undefined
+c;
+NaN
+typeof c;
+"number"
+isNaN(c);
+true
+isNaN(c)?0:c;
+0
+a=100;
+100
+var c = 100/0;
+undefined
+c;
+Infinity
+typeof c;
+"number"
+isFinite(c)?c:0;
+0
+a="100";
+"100"
+parseInt(a);
+100
+parseInt("Amit");
+NaN
+parseFloat("100.20");
+100.2
+Number("100");
+100
+Number("100.20");
+100.2
+typeof parseInt;
+"function"
+typeof Number;
+"function"
+class A{
+
+}
+undefined
+typeof A;
+"function"
+var a= 'Amit';
+undefined
+typeof a;
+"string"
+a="Amit";
+"Amit"
+typeof a;
+"string"
+a='A';
+"A"
+typeof a;
+"string"
+a  = "Let's Do It ";
+"Let's Do It "
+a= `gdhjgjdfghfgjkfdhgkjdf
+gdf
+gdf
+g
+df
+gdf
+g
+dfg
+fdg
+df
+gd
+`;
+"gdhjgjdfghfgjkfdhgkjdf
+gdf
+gdf
+g
+df
+gdf
+g
+dfg
+fdg
+df
+gd
+"
+typeof a;
+"string"
+a = 100;
+100
+b = 200;
+200
+c = a + b;
+300
+"A is "+a+" and B is "+b+" and C is "+c;
+"A is 100 and B is 200 and C is 300"
+`A is ${a} and B is ${b} and C is ${c}`;
+"A is 100 and B is 200 and C is 300"
+var d = true;
+undefined
+typeof d;
+"boolean"
+true + true;
+2
+a=100;
+100
+a = a + true - false;
+101
+a=100;
+100
+b = "100";
+"100"
+a==b;
+true
+a===b;
+false

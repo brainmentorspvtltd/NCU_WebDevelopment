@@ -1,0 +1,118 @@
+var obj  = {};
+undefined
+typeof obj;
+"object"
+obj instanceof Object;
+true
+typeof Object;
+"function"
+obj.id =1001;
+1001
+obj.name = "Amit";
+"Amit"
+obj.address = "Delhi";
+"Delhi"
+obj;
+{id: 1001, name: "Amit", address: "Delhi"}
+obj.id;
+1001
+obj.name;
+"Amit"
+var key = "id";
+undefined
+obj[key];
+1001
+key="name";
+"name"
+obj[key];
+"Amit"
+obj.id;
+1001
+obj.key;
+undefined
+obj[key];
+"Amit"
+obj;
+{id: 1001, name: "Amit", address: "Delhi"}
+for(var key in obj){
+console.log(obj[key]);
+}
+(unknown) 1001
+(unknown) Amit
+(unknown) Delhi
+undefined
+for(var key in obj){
+console.log(key +" " + obj[key]);
+}
+(unknown) id 1001
+(unknown) name Amit
+(unknown) address Delhi
+undefined
+delete obj.address;
+true
+obj;
+{id: 1001, name: "Amit"}
+var t = [10,20,30,40,50];
+undefined
+typeof t;
+"object"
+t instanceof Array;
+true
+typeof Array;
+"function"
+t instanceof Object;
+true
+var r = ["amit",10,true,{id:1001},[10,20,[90,100]]]
+undefined
+t;
+(5) [10, 20, 30, 40, 50]
+r;
+(5) ["amit", 10, true, {…}, Array(3)]0: "amit"1: 102: true3: {id: 1001}4: Array(3)0: 101: 202: (2) [90, 100]length: 3__proto__: Array(0)length: 5__proto__: Array(0)
+var t = [10,20,30,40,50];
+undefined
+var m = new Array(10,20,30,40,50);
+undefined
+typeof m;
+"object"
+m instanceof Array;
+true
+function add(){
+console.log("I am Add ");
+}
+undefined
+typeof add;
+"function"
+add();
+(unknown) I am Add 
+undefined
+add(10,20);
+(unknown) I am Add 
+undefined
+add([10,20,30,40],"Amit",true);
+(unknown) I am Add 
+undefined
+var m = add;
+undefined
+m();
+(unknown) I am Add 
+undefined
+var t = add;
+undefined
+var t = 10;
+undefined
+var n = [10,20,30];
+undefined
+var n2 = [1,2,3,4];
+undefined
+var hh = [n,n2];
+undefined
+hh;
+(2) [Array(3), Array(4)]0: (3) [10, 20, 30]1: (4) [1, 2, 3, 4]length: 2__proto__: Array(0)
+var n3 = [...n,...n2];
+undefined
+n3;
+(7) [10, 20, 30, 1, 2, 3, 4]
+n3.length=0;
+0
+n3;
+[]
