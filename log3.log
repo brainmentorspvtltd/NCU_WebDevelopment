@@ -1,259 +1,107 @@
-function evenOdd(num){
-return num%2==0?"Even "+num:"Odd "+num;
+var arr = [10,20,30,40,50];
+undefined
+for(let  i  = 0; i<arr.length; i++){
+console.log(arr[i]);
+}
+VM1746:2 10
+VM1746:2 20
+VM1746:2 30
+VM1746:2 40
+VM1746:2 50
+undefined
+for(let a of arr){
+console.log(a);
+}
+VM1850:2 10
+VM1850:2 20
+VM1850:2 30
+VM1850:2 40
+VM1850:2 50
+undefined
+const salaryOperations = {
+    basicSalary:0,
+    inputSalary(basicSalary){
+           this.basicSalary = basicSalary; 
+    },
+    hra(){
+         return this.basicSalary * 0.30;   
+    },
+    ta(){
+        return this.basicSalary * 0.10; 
+    },
+    da(){
+        return this.basicSalary * 0.20; 
+    },
+    pf(){
+        return this.basicSalary * 0.05; 
+    },
+    gs(){
+        return this.basicSalary + this.hra() + this.da() + this.ta() - this.pf();
+    },
+    tax(){
+        return this.gs() * 0.10;
+    },
+    ns(){
+        return this.gs() - this.tax();
+    }
 }
 undefined
-function cube(num){
-return num**3;
-}
+salaryOperations;
+{basicSalary: 0, inputSalary: ƒ, hra: ƒ, ta: ƒ, da: ƒ, …}
+var key = "hra";
 undefined
-function loop(fn){
-for(var i = 1; i<=10; i++){
-console.log(fn(i));
-}
-}
-undefined
-loop(evenOdd);
-VM2546:3 Odd 1
-VM2546:3 Even 2
-VM2546:3 Odd 3
-VM2546:3 Even 4
-VM2546:3 Odd 5
-VM2546:3 Even 6
-VM2546:3 Odd 7
-VM2546:3 Even 8
-VM2546:3 Odd 9
-VM2546:3 Even 10
-undefined
-loop(cube);
-VM2546:3 1
-VM2546:3 8
-VM2546:3 27
-VM2546:3 64
-VM2546:3 125
-VM2546:3 216
-VM2546:3 343
-VM2546:3 512
-VM2546:3 729
-VM2546:3 1000
-undefined
-function calc(){
-console.log("I am Inside Calc ");
-function add(){
-	console.log("I am Inside Add ");
-}
-return add;
-}
-undefined
-var t1 = calc();
-VM9411:2 I am Inside Calc 
-undefined
-t1;
-ƒ add(){
-	console.log("I am Inside Add ");
-}
-t1();
-VM9411:4 I am Inside Add 
-undefined
-var counter = 0;
-function increment(){
-counter++;
-return counter;
-}
-undefined
-counter;
+salaryOperations[key]()
 0
-increment();
-1
-increment();
-2
-increment();
-3
-increment();
-4
-counter;
-4
-counter=0;
+key = "da";
+"da"
+salaryOperations[key]()
 0
-increment();
-1
-increment();
-2
-counter="Hello";
-"Hello"
-increment();
-NaN
-function init(){
-var c = 0;
-
-function doIncrement(){
-c++;
-return c;
+salaryOperations.basicSalary=9000;
+9000
+salaryOperations[key]()
+1800
+key = "ta";
+"ta"
+salaryOperations[key]()
+900
+for(let key in salaryOperations){
+console.log(key);
 }
-return doIncrement;
-}
+VM8263:2 basicSalary
+VM8263:2 inputSalary
+VM8263:2 hra
+VM8263:2 ta
+VM8263:2 da
+VM8263:2 pf
+VM8263:2 gs
+VM8263:2 tax
+VM8263:2 ns
 undefined
-var t = init();
+for(let key in salaryOperations){
+if(key=='basicSalary' || key=='inputSalary'){
+continue;
+}
+console.log(key);
+}
+VM8385:5 hra
+VM8385:5 ta
+VM8385:5 da
+VM8385:5 pf
+VM8385:5 gs
+VM8385:5 tax
+VM8385:5 ns
 undefined
-t;
-ƒ doIncrement(){
-c++;
-return c;
+for(let key in salaryOperations){
+if(key=='basicSalary' || key=='inputSalary'){
+continue;
 }
-typeof t;
-"function"
-t();
-1
-t();
-2
-t();
-3
-t();
-4
-c;
-VM12805:1 Uncaught ReferenceError: c is not defined
-    at <anonymous>:1:1
-(anonymous) @ VM12805:1
-t.c;
+console.log(salaryOperations[key]()+" "+key);
+}
+VM8511:5 2700 hra
+VM8511:5 900 ta
+VM8511:5 1800 da
+VM8511:5 450 pf
+VM8511:5 13950 gs
+VM8511:5 1395 tax
+VM8511:5 12555 ns
 undefined
-t;
-ƒ doIncrement(){
-c++;
-return c;
-}
-function init(){
-var c = 0;
-
-function doIncrement(){
-c++;
-return c;
-}
-function doDecrement(){
-c--;
-return c;
-}
-return [doIncrement,doDecrement];
-}
-undefined
-init()[0]();
-1
-function init(){
-var d =0;
-var increment=function(){
-++d;
-return d;
-}
-return increment;
-}
-undefined
-var t = init();
-undefined
-t;
-ƒ (){
-++d;
-return d;
-}
-t();
-1
-t();
-2
-function Calc{
-var add=function(x,y){
-return x + y;
-}
-var sub = function(x,y){
-return x- y;
-}
-}
-VM16122:1 Uncaught SyntaxError: Unexpected token {
-function Calc(){
-var add=function(x,y){
-return x + y;
-}
-var sub = function(x,y){
-return x- y;
-}
-}
-undefined
-function Calc(){
-var add=function(x,y){
-return x + y;
-}
-var sub = function(x,y){
-return x- y;
-}
-return [add,sub];
-}
-undefined
-var t = Calc();
-undefined
-t;
-(2) [ƒ, ƒ]0: ƒ (x,y)arguments: nullcaller: nulllength: 2name: "add"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM16251:2[[Scopes]]: Scopes[1]1: ƒ (x,y)length: 2__proto__: Array(0)
-function Calc(){
-var add=function add(x,y){
-return x + y;
-}
-var sub = function sub(x,y){
-return x- y;
-}
-return [add,sub];
-}
-undefined
-var t = Calc();
-undefined
-t;
-(2) [ƒ, ƒ]0: ƒ add(x,y)1: ƒ sub(x,y)length: 2__proto__: Array(0)
-function Calc(){
-var add=function (x,y){
-return x + y;
-}
-var sub = function (x,y){
-return x- y;
-}
-return {"addition":add,"subtract":sub};
-}
-undefined
-var t = Calc();
-undefined
-t;
-{addition: ƒ, subtract: ƒ}addition: ƒ (x,y)subtract: ƒ (x,y)__proto__: Object
-t.addition();
-NaN
-t.addition(10,20);
-30
-t.subtract(10,20);
--10
-var add = (x,y)=>x+y;
-undefined
-add(10,20);
-30
-var e = t=>++t;
-undefined
-e(100)
-101
-typeof e;
-"function"
-var add = (x,y)=>{
-console.log(` X is ${x} and Y is ${y}`);
-return x + y;
-}
-undefined
-add(100,200);
-VM19467:2  X is 100 and Y is 200
-300
-add();
-VM19467:2  X is undefined and Y is undefined
-NaN
-var add = (x=0,y=0)=>{
-console.log(` X is ${x} and Y is ${y}`);
-return x + y;
-}
-undefined
-add();
-VM19752:2  X is 0 and Y is 0
-0
-add(10,20);
-VM19752:2  X is 10 and Y is 20
-30
-add(10);
-VM19752:2  X is 10 and Y is 0
-10
