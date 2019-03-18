@@ -1,0 +1,108 @@
+var obj = null;
+undefined
+obj.name ;
+VM117:1 Uncaught TypeError: Cannot read property 'name' of null
+    at <anonymous>:1:5
+(anonymous) @ VM117:1
+if(obj!=null){
+console.log(" Obj ", obj.name);
+}
+else{
+console.log("Null ");
+}
+VM286:5 Null 
+undefined
+if(obj){
+console.log("Not Null ");
+}
+else{
+console.log("Null ");
+}
+VM360:5 Null 
+undefined
+obj = 0;
+0
+obj?"Truthy":"Falsy";
+"Falsy"
+obj = 10;
+10
+obj?"Truthy":"Falsy";
+"Truthy"
+obj = "";
+""
+obj?"Truthy":"Falsy";
+"Falsy"
+obj = "AMit";
+"AMit"
+obj?"Truthy":"Falsy";
+"Truthy"
+obj = false;
+false
+obj?"Truthy":"Falsy";
+"Falsy"
+obj = 10 - "amit";
+NaN
+obj?"Truthy":"Falsy";
+"Falsy"
+var arr = [10,20,30,40,50];
+undefined
+var items = [{id:101,name:'Abcd',price:1111},{id:102,name:'Xyz',price:2222}]
+undefined
+items.find(item=>item.id==101);
+{id: 101, name: "Abcd", price: 1111}
+function myCompare(itemObject){
+	return itemObject.id==101;
+}
+undefined
+items.find(myCompare);
+{id: 101, name: "Abcd", price: 1111}
+items.find(item=>item.id==100000);
+undefined
+items.find(item=>item.id==100000)?"Found":"Not Found";
+"Not Found"
+items.find(item=>item.id==101)?"Found":"Not Found";
+"Found"
+items.findIndex(item=>item.id==101)>=0?"Found":"Not Found";
+"Found"
+items.filter(item=>item.id==101);
+[{…}]0: {id: 101, name: "Abcd", price: 1111}length: 1__proto__: Array(0)
+arr  ;
+(5) [10, 20, 30, 40, 50]
+arr.splice(1,1);
+[20]
+arr;
+(4) [10, 30, 40, 50]
+arr.splice(1,2);
+(2) [30, 40]
+arr;
+(2) [10, 50]
+arr = [10,20,30,10,10,20,10,90,10];
+(9) [10, 20, 30, 10, 10, 20, 10, 90, 10]
+arr  =arr.filter(z=>z!=10);
+(4) [20, 30, 20, 90]
+arr;
+(4) [20, 30, 20, 90]
+arr.forEach(y=>console.log('Y is ',+y));
+VM4079:1 Y is  20
+VM4079:1 Y is  30
+VM4079:1 Y is  20
+VM4079:1 Y is  90
+undefined
+arr = [10,20,1, 90,100,21];
+(6) [10, 20, 1, 90, 100, 21]0: 101: 202: 13: 904: 1005: 21length: 6__proto__: Array(0)
+arr.sort((a,b)=>a-b);
+(6) [1, 10, 20, 21, 90, 100]
+arr.sort((a,b)=>b-a);
+(6) [100, 90, 21, 20, 10, 1]
+var names = ["anil","ram","amit","ajay"];
+undefined
+"anil".localeCompare("amit");
+1
+"amit".localeCompare("anil");
+-1
+"amit".localeCompare("amit");
+0
+names.sort((a,b)=>a.localeCompare(b));
+(4) ["ajay", "amit", "anil", "ram"]
+names.sort((a,b)=>b.localeCompare(a));
+(4) ["ram", "anil", "amit", "ajay"]
