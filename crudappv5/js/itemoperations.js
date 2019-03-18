@@ -24,8 +24,8 @@ const itemOperations = {
     countTotalMark(){
            return this.items.filter(itemObject=>itemObject.isMarked).length; 
     },
-    sort(){
-
+    sortByPrice(){
+        return this.items.sort((a,b)=>a.price-b.price);
     },
     update(){
 

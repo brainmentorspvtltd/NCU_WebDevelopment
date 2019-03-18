@@ -17,7 +17,12 @@ function updateRecord(){
     }
     printTable(itemOperations.items);
 }
+
+const sortByPrice=()=>printTable(itemOperations.sortByPrice());
+
+
 function bindEvents(){
+    document.querySelector('#sort').addEventListener('click',sortByPrice);
     document.querySelector('#update').addEventListener('click',updateRecord);
     document.querySelector('#searchTxt').addEventListener('change',search);
     document.querySelector('#search').addEventListener('click',showHideSearchBar);
