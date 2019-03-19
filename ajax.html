@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+    <script>
+        function printImages(images) {
+            var div = document.querySelector('#imagediv');
+            div.innerHTML = '';
+            images.forEach(image => {
+                let img = document.createElement('img');
+                img.src = image.images.original.url;
+                div.appendChild(img);
+            })
+        }
+
+        function doAjax() {
+            var txt = document.querySelector('#txt').value;
+            const url = `http://api.giphy.com/v1/gifs/search?q=${txt}&api_key=vFRSFWo6g7vJ7ZAjt3DMDolU52ORTxwH&limit=5`;
+            console.log('Before Fetch');
+            var promise = fetch(url);
+            promise.then(response => {
+                response.json().then(data => {
+                    console.log('JSON Rec ', data);
+                    printImages(data.data);
+                }).catch(err => {
+                    console.log('Invald JSON ', err);
+                })
+            }).catch(err => {
+                console.log('Server Error ', err);
+            })
+            console.log('After Fetch ');
+            for (let i = 1; i <= 10; i++) {
+                console.log('Doing Something Else ', i);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input id='txt' type="text" placeholder="Type to Search Image">
+    <button onclick="doAjax()"> Search</button>
+    <fieldset>
+        <legend>Output</legend>
+        <div id='imagediv'>
+        </div>
+    </fieldset>
+</body>
+
+</html>
