@@ -1,0 +1,15 @@
+<input type="text" (input)="takeSalary($event)" placeholder="Type Basic Salary">
+<button (click)="computeIt()">Compute</button>
+<p>Your Basic Salary is {{basicSalary}}</p>
+<div>
+    <fieldset>
+        <legend>Salary Details</legend>
+        <p>Hra is {{salaryModel.hra()}}</p>
+        <p>Da is {{salaryModel.da()}}</p>
+        <p>TA is {{salaryModel.ta()}}</p>
+        <p>PF is {{salaryModel.pf()}}</p>
+        <p>GS is {{salaryModel.gs()}} </p>
+        <p>Tax is {{salaryModel.tax()}}</p>
+        <p>NS is {{salaryModel.ns()}}</p>
+    </fieldset>
+</div>

@@ -1,0 +1,13 @@
+<input type="text" (keyup)="takeInput($event)">
+<button (click)="showHideIt()">ShowHide</button>
+<h1>I am HTML</h1>
+<div [hidden]="flag">
+    <h1>I am a Div</h1>
+</div>
+<p [class]="myclass" [innerText]="name"></p>
+<br>
+<app-salarycalc></app-salarycalc>
+
+<br>
+<hr>
+<app-salarycompute></app-salarycompute>
