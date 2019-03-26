@@ -1,0 +1,7 @@
+<p>All Categories are </p>
+
+<ul>
+    <li *ngFor="let categorie of categories">
+        {{categorie.id}} {{categorie.name}} {{categorie.price}} <img (click)="getId(categorie.id)" [src]="categorie.url">
+    </li>
+</ul>
