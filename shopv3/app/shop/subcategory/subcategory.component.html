@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let sub of subCategories">
+        {{sub.id}} <button (click)="getSubId(sub.id)">{{sub.name}}</button> {{sub.price}}
+    </li>
+</ul>
