@@ -1,0 +1,9 @@
+<p>
+    child1 works!
+</p>
+<input type="text" placeholder="Type Your Name" (input)="takeInput($event)"> {{title|titlecase}}
+<p [innerText]="title"></p>
+
+<input type="text" [(ngModel)]="price"> Price is {{price|currency:'INR':true}}
+<br> {{price|number:'.2'}}
+<br> Object is {{object |json}}
