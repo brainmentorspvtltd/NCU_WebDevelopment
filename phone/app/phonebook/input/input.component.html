@@ -1,0 +1,11 @@
+<div class='form-group'>
+    <label for="">Name</label>
+    <input #name type="text" placeholder="Type Your Name" class='form-control'>
+</div>
+<div class='form-group'>
+    <label for="">Phone</label>
+    <input #phone type="text" placeholder="Type Your Phone" class='form-control'>
+</div>
+<div class='form-group'>
+    <button (click)="add(name.value,phone.value)" class='btn btn-primary'>Add</button>
+</div>

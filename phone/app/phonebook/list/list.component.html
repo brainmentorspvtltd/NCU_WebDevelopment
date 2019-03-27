@@ -1,0 +1,17 @@
+<table class='table table-bordered'>
+    <thead class='thead-dark'>
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let phoneobj of phoneList;let i =index">
+            <app-record [counter]="i+1" [currentPhone]="phoneobj"></app-record>
+            <!-- <td>{{i+1}}</td>
+            <td>{{phoneobj.name}}</td>
+            <td>{{phoneobj.phone}}</td> -->
+        </tr>
+    </tbody>
+</table>
