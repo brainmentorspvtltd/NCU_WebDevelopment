@@ -1,0 +1,14 @@
+<h1 class='alert-info text-center'>Login</h1>
+<h3>{{message}}</h3>
+<div class='form-group'>
+    <label for="">Userid</label>
+    <input class='form-control' type="text" placeholder="Type UserName" #userid>
+</div>
+<div class='form-group'>
+    <label for="">Password</label>
+    <input class='form-control' type="password" placeholder="Type Password" #pwd>
+</div>
+<div class='form-group'>
+    <button (click)="doLogin(userid.value,pwd.value)" class='btn btn-primary'>Login</button>
+    <button class='btn btn-light'>Reset</button>
+</div>
