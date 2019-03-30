@@ -1,0 +1,5 @@
+<p>Welcome Admin , File Upload</p>
+<p>Download File Format <button (click)="download()">XLS Template Download</button></p>
+<input type="file" (change)="getSelectedFile($event)">
+<button (click)="uploadFile()">Upload</button>
+<br> {{message}}
