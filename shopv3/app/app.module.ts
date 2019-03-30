@@ -1,22 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShopComponent } from './shop/shop.component';
-import { CategoryComponent } from './shop/category/category.component';
-import { SubcategoryComponent } from './shop/subcategory/subcategory.component';
-import { ItemsComponent } from './shop/items/items.component';
+import { LoginComponent } from './shop/login/login.component';
+import { DashboardComponent } from './shop/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShopComponent,
-    CategoryComponent,
-    SubcategoryComponent,
-    ItemsComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

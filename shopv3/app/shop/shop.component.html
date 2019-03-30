@@ -1,4 +1,15 @@
-<app-category (shareToCategoryComponent)="shareToCategory($event)"></app-category>
-<hr>
-<app-subcategory (shareToSubCategoryComponent)="shareToSub($event)" [subCategories]="subCategories"></app-subcategory>
-<app-items [item]="item"></app-items>
+<div class='container'>
+    <p>Data is {{data|json}}</p>
+
+    <div *ngIf="status=='S'; then dashboard else login"></div>
+
+
+    <ng-template #login>
+        <app-login></app-login>
+    </ng-template>
+    <ng-template #dashboard>
+        <app-dashboard></app-dashboard>
+    </ng-template>
+
+
+</div>
